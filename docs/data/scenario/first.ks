@@ -22,6 +22,31 @@
     [link target=*tag_run_1] →走る [endlink][r]
     [s]
 
+*gameover_hitpoint
+    
+    [freeimage]
+    [cm]
+
+    体力切れでゲームオーバーです。[r]
+    [link target=*start] やり直す[endlink][r]
+    [s]
+*gameover_time
+
+    [freeimage]
+    [cm]
+
+    時間切れでゲームオーバーです。[r]
+    [link target=*start] やり直す[endlink][r]
+    [s]
+*clear_meet
+    
+    [freeimage]
+    [cm]
+
+    セリヌンティウスに会ってクリア[r]
+    [link target=*start] やり直す[endlink][r]
+    [s]
+
 *tag_sleep_1
 
     [freeimage]
@@ -30,7 +55,11 @@
     [eval exp="jikan = jikan-10"]
     [eval exp="kyori = kyori"]
     [if exp="hp < 1"]
-        [jump target=*gameover_hp]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [elsif exp="kyori < 1"]
+        [jump target=*clear_meet]
     [else]
         [bg storage=img0.jpg time=500]
 
@@ -55,7 +84,11 @@
     [eval exp="kyori = kyori-10"]
 
     [if exp="hp < 1"]
-        [jump target=*gameover_hp]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [elsif exp="kyori < 1"]
+        [jump target=*clear_meet]
     [else]
         [bg storage=run.jpg time=500]
 
@@ -70,13 +103,6 @@
         [s]
 
     [endif]
-*gameover_hp
-    
-    [freeimage]
-    [cm]
 
-    体力切れでゲームオーバーです。[r]
-    [link target=*start] やり直す[endlink][r]
-    [s]
     
 
