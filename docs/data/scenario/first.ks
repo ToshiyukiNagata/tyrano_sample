@@ -16,8 +16,11 @@
 
     「走るか寝るかするメロス」[l][r]
     [link target=*before_start] →スタート [endlink][r]
+    [s]
+
 *before_start
     [if exp="countdown < 1"]
+        [cm]
         [jump target=*after_start]
     [else]
         [cm]
@@ -54,6 +57,7 @@
     [jump target=*before_start]
     
 *after_start
+    [cm]
     [bg storage=ie.jpg time=500]
     現在地：妹の家[r]
     NEXT：村の入り口[r]
