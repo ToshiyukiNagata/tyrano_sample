@@ -38,6 +38,12 @@
     [link target=*start] やり直す[endlink][r]
     [s]
 
+*gameover_touzoku
+    [cm]
+
+    盗賊に負けてしまった…[r]
+    [link target=*start] やり直す[endlink][r]
+    [s]
 *clear_meet
 
     [cm]
@@ -287,8 +293,112 @@
     [cm]
 
     川が反乱を起こしている…[r]
+    [link target=*tag_ukai_kawa] →迂回する [endlink][r]
+    [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r]
+    [s]
+*tag_ukai_kawa
+    [cm]
+    [eval exp="hp = hp-10"]
+    [eval exp="jikan = jikan-20"]
+    [if exp="hp < 1"]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [else]
+        [bg storage=img0.jpg time=500]
+        
+        時間はかかったが何とか迂回できた。[r]
+        現在地：村はずれの川[r]
+        NEXT：峠[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと30km[r][r]
+
+        [link target=*tag_sleep_kawa] →寝る [endlink][r]
+        [link target=*tag_run_touge] →走る [endlink][r]
+        [s]
+
+    [endif]
+*tag_susumu_kawa
+    [cm]
+    [eval exp="hp = hp-20"]
+    [eval exp="jikan = jikan-10"]
+    [if exp="hp < 1"]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [else]
+        [bg storage=img0.jpg time=500]
+        
+        なんとか泳ぎ切った…[r]
+        現在地：村はずれの川[r]
+        NEXT：峠[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと30km[r][r]
+
+        [link target=*tag_sleep_kawa] →寝る [endlink][r]
+        [link target=*tag_run_touge] →走る [endlink][r]
+        [s]
+
+    [endif]
 
 *event_touge
+    [cm]
+
+    山賊が現れた！[r]
+    [link target=*tag_tatakau_touge] →戦う [endlink][r]
+    [link target=*tag_nigeru_touge] →逃げる [endlink][r]
+    [s]
+
+*tag_nigeru_touge
+    [cm]
+    [eval exp="hp = hp-20"]
+    [eval exp="jikan = jikan-10"]
+    [if exp="hp < 1"]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [else]
+        [bg storage=img0.jpg time=500]
+        
+        なんとか逃げ切った…[r]
+        現在地：村はずれの川[r]
+        NEXT：峠[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと30km[r][r]
+
+        [link target=*tag_sleep_touge] →寝る [endlink][r]
+        [link target=*tag_run_nohara] →走る [endlink][r]
+        [s]
+
+    [endif]
+*tag_tatakau_touge
+    [cm]
+    [eval exp="hp = hp"]
+    [eval exp="jikan = jikan-10"]
+    [if exp="hp < 1"]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [elsif exp="hp < 50"]
+        [jump target=*gameover_touzoku]
+    [else]
+        [bg storage=img0.jpg time=500]
+        
+        盗賊に勝利した！[r]
+        現在地：村はずれの川[r]
+        NEXT：峠[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと30km[r][r]
+
+        [link target=*tag_sleep_touge] →寝る [endlink][r]
+        [link target=*tag_run_nohara] →走る [endlink][r]
+        [s]
+
+    [endif]
 
 *event_nohara
 
