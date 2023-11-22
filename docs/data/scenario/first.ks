@@ -16,8 +16,8 @@
     残り時間：[emb exp="jikan"]時間[r]
     セリヌンティウスまであと[emb exp="kyori"]km[l]
 
-    [link target=*tag_sleep_1] →寝る [endlink][l][r]
-    [link target=*tag_run_1] →走る [endlink][l][r]
+    [link target=*tag_sleep_1] →寝る [endlink][r]
+    [link target=*tag_run_1] →走る [endlink][r]
     [s]
 
 *tag_sleep_1
@@ -26,13 +26,17 @@
 
     [bg storage=img0.jpg time=500]
 
+    [eval exp="hp = 100+10"]
+    [eval exp="jikan = 100-10"]
+    [eval exp="kyori = 50"]
+
     メロスは休んだ。[r]
-    残り体力：[emb exp="hp+10"][r]
-    残り時間：[emb exp="jikan-10"]時間[r]
+    残り体力：[emb exp="hp"][r]
+    残り時間：[emb exp="jikan"]時間[r]
     セリヌンティウスまであと[emb exp="kyori"]km[r]
 
-    [link target=*tag_sleep_1] →寝る [endlink][l][r]
-    [link target=*tag_run_1] →走る [endlink][l][r]
+    [link target=*tag_sleep_1] →寝る [endlink][r]
+    [link target=*tag_run_1] →走る [endlink][r]
     [s]
 
     [cm]
@@ -41,15 +45,19 @@
 *tag_run_1
 
     [bg storage=run.jpg time=500]
+    
+    [eval exp="hp = 100-10"]
+    [eval exp="jikan = 100-10"]
+    [eval exp="kyori = 50-10"]
 
     [cm]
     メロスは走った。[r]
-    残り体力：[emb exp="hp-10"][r]
-    残り時間：[emb exp="jikan-10"]時間[r]
-    セリヌンティウスまであと[emb exp="kyori-10"]km[r]
+    残り体力：[emb exp="hp"][r]
+    残り時間：[emb exp="jikan"]時間[r]
+    セリヌンティウスまであと[emb exp="kyori"]km[r]
 
-    [link target=*tag_sleep_1] →寝る [endlink][l][r]
-    [link target=*tag_run_1] →走る [endlink][l][r]
+    [link target=*tag_sleep_1] →寝る [endlink][r]
+    [link target=*tag_run_1] →走る [endlink][r]
     [s]
 
     [cm]
