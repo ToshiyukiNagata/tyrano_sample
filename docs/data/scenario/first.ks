@@ -10,7 +10,7 @@
 メロスは出発した。[l][r]
 [eval exp="hp = 100"]
 [eval exp="jikan = 100"]
-[eval exp="jikan = 50"]
+[eval exp="kyori = 50"]
 
 残り体力：[emb exp="hp"][l]
 残り時間：[emb exp="jikan"]時間[l]
@@ -27,9 +27,9 @@
 [bg storage=img0.jpg time=500]
 
 メロスは休んだ。[l]
-残り体力：[emb exp="hp+10"][l]
-残り時間：[emb exp="jikan-10"]時間[l]
-セリヌンティウスまであと[emb exp="kyori"]km[l]
+残り体力：[emb exp="hp+10"][r]
+残り時間：[emb exp="jikan-10"]時間[r]
+セリヌンティウスまであと[emb exp="kyori"]km[r]
 
 [link target=*tag_sleep_1] →寝る [endlink][r]
 [link target=*tag_run_1] →走る [endlink][r]
