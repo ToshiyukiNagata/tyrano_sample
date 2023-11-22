@@ -8,7 +8,6 @@
     [cm]
 
     「走るか寝るかするメロス」[l][r]
-
     現在地：妹の家[r]
     NEXT：村の入り口[r]
     メロスはどうする？[r]
@@ -58,12 +57,13 @@
         [jump target=*gameover_time]
     [else]
         [bg storage=img0.jpg time=500]
-    現在地：妹の家[r]
-    NEXT：村の入り口[r]
+    
+        現在地：妹の家[r]
+        NEXT：村の入り口[r]
         メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと50km[r]
+        セリヌンティウスまであと50km[r][r]
 
         [link target=*tag_sleep_ie] →寝る [endlink][r]
         [link target=*tag_run_gate] →走る [endlink][r]
@@ -82,12 +82,13 @@
         [jump target=*gameover_time]
     [else]
         [bg storage=img0.jpg time=500]
+        
+        メロスは休んだ。[r]
         現在地：村の入り口[r]
         NEXT：村はずれの川[r]
-        メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと40km[r]
+        セリヌンティウスまであと40km[r][r]
 
         [link target=*tag_sleep_gate] →寝る [endlink][r]
         [link target=*tag_run_kawa] →走る [endlink][r]
@@ -109,12 +110,13 @@
     [else]
         [bg storage=run.jpg time=500]
 
+        
+        メロスは走った。[r]
         現在地：村の入り口[r]
         NEXT：村はずれの川[r]
-        メロスは走った。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと40km[r]
+        セリヌンティウスまであと40km[r][r]
 
         [link target=*tag_sleep_gate] →寝る [endlink][r]
         [link target=*tag_run_kawa] →走る [endlink][r]
@@ -133,12 +135,13 @@
         [jump target=*gameover_time]
     [else]
         [bg storage=img0.jpg time=500]
+        
+        メロスは休んだ。[r]
         現在地：村はずれの川[r]
         NEXT：峠[r]
-        メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと30km[r]
+        セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る [endlink][r]
         [link target=*tag_run_touge] →走る [endlink][r]
@@ -161,12 +164,13 @@
         [bg storage=run.jpg time=500]
 
         [cm]
+        
+        メロスは走った。[r]
         現在地：村はずれの川[r]
         NEXT：峠[r]
-        メロスは走った。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと30km[r]
+        セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る [endlink][r]
         [link target=*tag_run_touge] →走る [endlink][r]
@@ -185,12 +189,13 @@
         [jump target=*gameover_time]
     [else]
         [bg storage=img0.jpg time=500]
+        
+        メロスは休んだ。[r]
         現在地：峠[r]
         NEXT：野原[r]
-        メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと20km[r]
+        セリヌンティウスまであと20km[r][r]
 
         [link target=*tag_sleep_touge] →寝る [endlink][r]
         [link target=*tag_run_nohara] →走る [endlink][r]
@@ -213,12 +218,14 @@
         [bg storage=run.jpg time=500]
 
         [cm]
+        
+        メロスは走った。[r]
         現在地：峠[r]
         NEXT：野原[r]
-        メロスは走った。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと20km[r]
+        [r]
 
         [link target=*tag_sleep_touge] →寝る [endlink][r]
         [link target=*tag_run_nohara] →走る [endlink][r]
@@ -237,13 +244,13 @@
         [jump target=*gameover_time]
     [else]
         [bg storage=img0.jpg time=500]
+        メロスは休んだ。[r]
         現在地：野原[r]
         NEXT：シラクス処刑場[r]
-        メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと10km[r]
-
+        [r]
         [link target=*tag_sleep_nohara] →寝る [endlink][r]
         [link target=*clear_meet]→走る [endlink][r]
         [s]
@@ -264,19 +271,22 @@
         [bg storage=run.jpg time=500]
 
         [cm]
+        メロスは走った。[r]
         現在地：野原[r]
         NEXT：シラクス処刑場[r]
-        メロスは走った。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと10km[r]
-
+        [r]
         [link target=*tag_sleep_nohara] →寝る [endlink][r]
         [link target=*clear_meet] →走る [endlink][r]
         [s]
 
     [endif]
 *event_kawa
+    [cm]
+
+    川が反乱を起こしている…[r]
 
 *event_touge
 
