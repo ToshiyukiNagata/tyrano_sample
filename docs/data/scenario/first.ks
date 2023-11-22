@@ -23,10 +23,9 @@
 *tag_sleep_1
 
     [cm]
-    [if exp="hp = 0"]
+    [if exp="hp < 1"]
         [jump target=*gameover]
     [else]
-        [bg storage=run.jpg time=500]
         [bg storage=img0.jpg time=500]
 
         [eval exp="hp = hp+10"]
@@ -46,7 +45,7 @@
     [endif]
 
 *tag_run_1
-    [if exp="hp = 0"]
+    [if exp="hp < 1"]
         [jump target=*gameover]
     [else]
         [bg storage=run.jpg time=500]
