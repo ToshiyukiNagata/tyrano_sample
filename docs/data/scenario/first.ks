@@ -29,6 +29,7 @@
     体力切れでゲームオーバーです。[r]
     [link target=*start] やり直す[endlink][r]
     [s]
+
 *gameover_time
 
     [freeimage]
@@ -37,6 +38,7 @@
     時間切れでゲームオーバーです。[r]
     [link target=*start] やり直す[endlink][r]
     [s]
+
 *clear_meet
 
     [freeimage]
@@ -96,6 +98,7 @@
         [s]
 
     [endif]
+    
 *tag_sleep_2
 
     [freeimage]
