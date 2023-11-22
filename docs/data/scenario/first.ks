@@ -390,11 +390,11 @@
         [bg storage=touzoku_win.jpg time=500]
         
         盗賊に勝利した！[r]
-        現在地：村はずれの川[r]
-        NEXT：峠[r]
+        現在地：峠[r]
+        NEXT：野原[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと30km[r][r]
+        セリヌンティウスまであと20km[r][r]
 
         [link target=*tag_sleep_touge] →寝る [endlink][r]
         [link target=*event_nohara] →走る [endlink][r]
