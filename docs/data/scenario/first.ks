@@ -374,6 +374,7 @@
         [s]
 
     [endif]
+    
 *tag_tatakau_touge
     [cm]
     [eval exp="hp = hp"]
