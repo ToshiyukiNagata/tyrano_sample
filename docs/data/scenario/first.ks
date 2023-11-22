@@ -402,8 +402,8 @@
 
 *event_nohara
     [cm]
-    ???「ああ、メロス様。」
-    この声は…
+    ???「ああ、メロス様。」[r]
+    この声は…[r]
     [link target=*tag_seikai] →フィロストラトスか？ [endlink][r]
     [link target=*tag_huseikai] →アレキスか？ [endlink][r]
     [link target=*tag_huseikai] →ディオニスか？ [endlink][r]
