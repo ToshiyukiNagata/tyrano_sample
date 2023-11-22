@@ -54,6 +54,7 @@
     [jump target=*before_start]
     
 *after_start
+    [bg storage=ie.jpg time=500]
     現在地：妹の家[r]
     NEXT：村の入り口[r]
     ついに今日からスタートだ。[r]
