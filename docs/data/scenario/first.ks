@@ -26,7 +26,13 @@
 
 [bg storage=img0.jpg time=500]
 
+メロスは休んだ。[l]
+残り体力：[emb exp="hp+10"][l]
+残り時間：[emb exp="jikan-10"]時間[l]
+セリヌンティウスまであと[emb exp="kyori"]km[l]
 
+[link target=*tag_sleep_1] →寝る [endlink][r]
+[link target=*tag_run_1] →走る [endlink][r]
 
 [cm]
 
@@ -37,9 +43,13 @@
 [bg storage=run.jpg time=500]
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
+メロスは走った。[l]
+残り体力：[emb exp="hp-10"][l]
+残り時間：[emb exp="jikan-10"]時間[l]
+セリヌンティウスまであと[emb exp="kyori-10"]km[l]
 
-【 GOOD END 】[l][cm]
+[link target=*tag_sleep_1] →寝る [endlink][r]
+[link target=*tag_run_1] →走る [endlink][r]
+[cm]
 
 [jump target=*start]
