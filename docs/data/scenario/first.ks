@@ -19,8 +19,8 @@
     残り時間：[emb exp="jikan"]時間[r]
     セリヌンティウスまであと50km[l][r]
 
-   [link target=*tag_sleep_0] →寝る [endlink][r]
-    [link target=*tag_run_1] →走る [endlink][r]
+   [link target=*tag_sleep_ie] →寝る [endlink][r]
+    [link target=*tag_run_gate] →走る [endlink][r]
     [s]
 
 *gameover_hitpoint
@@ -47,7 +47,7 @@
     [link target=*start] 初めからやり直す[endlink][r]
     [s]
 
-*tag_sleep_0
+*tag_sleep_ie
 
     [cm]
     [eval exp="hp = hp+10"]
@@ -65,13 +65,13 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと50km[r]
 
-        [link target=*tag_sleep_1] →寝る [endlink][r]
-        [link target=*tag_run_2] →走る [endlink][r]
+        [link target=*tag_sleep_ie] →寝る [endlink][r]
+        [link target=*tag_run_gate] →走る [endlink][r]
         [s]
 
     [endif]
 
-*tag_sleep_1
+*tag_sleep_gate
 
     [cm]
     [eval exp="hp = hp+10"]
@@ -89,13 +89,13 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと40km[r]
 
-        [link target=*tag_sleep_1] →寝る [endlink][r]
+        [link target=*tag_sleep_gate] →寝る [endlink][r]
         [link target=*tag_run_2] →走る [endlink][r]
         [s]
 
     [endif]
 
-*tag_run_1
+*tag_run_gate
 
     [cm]
             
@@ -116,13 +116,13 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと40km[r]
 
-        [link target=*tag_sleep_1] →寝る [endlink][r]
-        [link target=*tag_run_2] →走る [endlink][r]
+        [link target=*tag_sleep_gate] →寝る [endlink][r]
+        [link target=*tag_run_kawa] →走る [endlink][r]
         [s]
 
     [endif]
 
-*tag_sleep_2
+*tag_sleep_kawa
 
     [cm]
     [eval exp="hp = hp+10"]
@@ -140,13 +140,13 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと30km[r]
 
-        [link target=*tag_sleep_2] →寝る [endlink][r]
-        [link target=*tag_run_3] →走る [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る [endlink][r]
+        [link target=*tag_run_touge] →走る [endlink][r]
         [s]
 
     [endif]
 
-*tag_run_2
+*tag_run_kawa
 
     [cm]
             
@@ -168,13 +168,13 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと30km[r]
 
-        [link target=*tag_sleep_2] →寝る [endlink][r]
-        [link target=*tag_run_3] →走る [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る [endlink][r]
+        [link target=*tag_run_touge] →走る [endlink][r]
         [s]
 
     [endif]
 
-*tag_sleep_3
+*tag_sleep_touge
 
     [cm]
     [eval exp="hp = hp+10"]
@@ -192,13 +192,13 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと20km[r]
 
-        [link target=*tag_sleep_3] →寝る [endlink][r]
-        [link target=*tag_run_4] →走る [endlink][r]
+        [link target=*tag_sleep_touge] →寝る [endlink][r]
+        [link target=*tag_run_nohara] →走る [endlink][r]
         [s]
 
     [endif]
 
-*tag_run_3
+*tag_run_touge
 
     [cm]
             
@@ -220,13 +220,13 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと20km[r]
 
-        [link target=*tag_sleep_3] →寝る [endlink][r]
-        [link target=*tag_run_4] →走る [endlink][r]
+        [link target=*tag_sleep_touge] →寝る [endlink][r]
+        [link target=*tag_run_nohara] →走る [endlink][r]
         [s]
 
     [endif]
 
-*tag_sleep_4
+*tag_sleep_nohara
 
     [cm]
     [eval exp="hp = hp+10"]
@@ -244,12 +244,12 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと10km[r]
 
-        [link target=*tag_sleep_4] →寝る [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る [endlink][r]
         [link target=*clear_meet]→走る [endlink][r]
         [s]
     [endif]
 
-*tag_run_4
+*tag_run_nohara
 
     [cm]
             
@@ -271,11 +271,15 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと10km[r]
 
-        [link target=*tag_sleep_3] →寝る [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る [endlink][r]
         [link target=*clear_meet] →走る [endlink][r]
         [s]
 
     [endif]
+*event_kawa
 
-    
+*event_touge
+
+*event_nohara
+
 
