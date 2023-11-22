@@ -15,7 +15,7 @@
     
 
     「走るか寝るかするメロス」[l][r]
-    [link target=*after_start] →スタート [endlink][r]
+    [link target=*before_start] →スタート [endlink][r]
 *before_start
     [if exp="countdown < 1"]
         [jump target=*after_start]
