@@ -5,8 +5,6 @@
     [wait time=200]
     [freeimage layer="base"]
     
-    [freeimage]
-    [cm]
 
     「走るか寝るかするメロス」[l][r]
 
@@ -24,7 +22,6 @@
 
 *gameover_hitpoint
     
-    [freeimage]
     [cm]
 
     体力切れでゲームオーバーです。[r]
@@ -33,7 +30,6 @@
 
 *gameover_time
 
-    [freeimage]
     [cm]
 
     時間切れでゲームオーバーです。[r]
@@ -42,7 +38,6 @@
 
 *clear_meet
 
-    [freeimage]
     [cm]
 
     クリア。[r]
@@ -51,7 +46,6 @@
 
 *tag_sleep_1
 
-    [freeimage]
     [cm]
     [eval exp="hp = hp+10"]
     [eval exp="jikan = jikan-10"]
@@ -74,8 +68,7 @@
     [endif]
 
 *tag_run_1
-    
-    [freeimage]
+
     [cm]
             
     [eval exp="hp = hp-10"]
@@ -102,7 +95,6 @@
 
 *tag_sleep_2
 
-    [freeimage]
     [cm]
     [eval exp="hp = hp+10"]
     [eval exp="jikan = jikan-10"]
@@ -125,8 +117,7 @@
     [endif]
 
 *tag_run_2
-    
-    [freeimage]
+
     [cm]
             
     [eval exp="hp = hp-10"]
@@ -153,7 +144,6 @@
 
 *tag_sleep_3
 
-    [freeimage]
     [cm]
     [eval exp="hp = hp+10"]
     [eval exp="jikan = jikan-10"]
@@ -176,8 +166,7 @@
     [endif]
 
 *tag_run_3
-    
-    [freeimage]
+
     [cm]
             
     [eval exp="hp = hp-10"]
@@ -204,7 +193,6 @@
 
 *tag_sleep_4
 
-    [freeimage]
     [cm]
     [eval exp="hp = hp+10"]
     [eval exp="jikan = jikan-10"]
@@ -226,8 +214,7 @@
     [endif]
 
 *tag_run_4
-    
-    [freeimage]
+
     [cm]
             
     [eval exp="hp = hp-10"]
