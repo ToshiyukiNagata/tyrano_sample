@@ -7,8 +7,42 @@
     
     [cm]
     [bg storage=ie.jpg time=500]
+    [eval exp="hp = 100"]
+    [eval exp="jikan = 100"]
+    [eval exp="power = 100"]
+    [eval exp="luck = 0"]
 
     「走るか寝るかするメロス」[l][r]
+    [link target=*after_start] →スタート [endlink][r]
+*before_start
+    [cm]
+    [bg storage=ie.jpg time=500]
+    現在地：妹の家[r]
+    残り体力：[emb exp="hp"][r]
+    戦闘力：[emb exp="power"][r]
+    今日は…[r]
+    [link target=*train] →体を鍛える。 [endlink][r]
+    [link target=*cure] →休む。 [endlink][r]
+    [link target=*pray] →教会に行く。 [endlink][r]
+    [s]
+*train
+    [cm]
+    [eval exp="power = power + 10"]
+    [eval exp="hp = hp - 10"]
+    体を鍛えた。[l][r]
+    [jump target=*before_start]
+*cure
+    [cm]
+    体を休めた。[l]
+    [jump target=*before_start]
+*pray
+    [cm]
+    [eval exp="luck = luck + 1"]
+    教会で祈りをささげた。[l][r]
+    災難を回避できる気がする…[l][r]
+    [jump target=*before_start]
+    
+*after_start
     現在地：妹の家[r]
     NEXT：村の入り口[r]
     メロスはどうする？[r]
@@ -19,7 +53,7 @@
     残り時間：[emb exp="jikan"]時間[r]
     セリヌンティウスまであと50km[l][r]
 
-   [link target=*tag_sleep_ie] →寝る [endlink][r]
+    [link target=*tag_sleep_ie] →寝る [endlink][r]
     [link target=*tag_run_gate] →走る [endlink][r]
     [s]
 
