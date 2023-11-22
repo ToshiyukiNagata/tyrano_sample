@@ -7,7 +7,7 @@
 
     「走るか寝るかするメロス」[l][r]
 
-    メロスは出発した。[l][r]
+    メロスは出発した。[r]
     [eval exp="hp = 100"]
     [eval exp="jikan = 100"]
     [eval exp="kyori = 50"]
@@ -51,6 +51,6 @@
     [link target=*tag_sleep_1] →寝る [endlink][l][r]
     [link target=*tag_run_1] →走る [endlink][l][r]
     [s]
-    
+
     [cm]
 
