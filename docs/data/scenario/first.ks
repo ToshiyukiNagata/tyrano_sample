@@ -5,6 +5,7 @@
     [wait time=200]
     [freeimage layer="base"]
 
+    [freeimage]
     [cm]
     「走るか寝るかするメロス」[l][r]
 
@@ -23,6 +24,7 @@
 
 *tag_sleep_1
 
+    [freeimage]
     [cm]
     [eval exp="hp = hp+10"]
     [eval exp="jikan = jikan-10"]
@@ -44,12 +46,14 @@
     [endif]
 
 *tag_run_1
+    
+    [freeimage]
     [cm]
             
     [eval exp="hp = hp-10"]
     [eval exp="jikan = jikan-10"]
     [eval exp="kyori = kyori-10"]
-    
+
     [if exp="hp < 1"]
         [jump target=*gameover_hp]
     [else]
@@ -67,9 +71,11 @@
 
     [endif]
 *gameover_hp
+    
+    [freeimage]
     [cm]
 
-    ゲームオーバーです。[r]
+    体力切れでゲームオーバーです。[r]
     [link target=*start] やり直す[endlink][r]
     [s]
     
