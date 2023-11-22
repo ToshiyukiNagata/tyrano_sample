@@ -397,7 +397,7 @@
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*tag_run_nohara] →走る [endlink][r]
+        [link target=*event_nohara] →走る [endlink][r]
         [s]
 
     [endif]
