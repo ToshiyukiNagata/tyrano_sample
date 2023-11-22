@@ -90,7 +90,7 @@
         セリヌンティウスまであと40km[r]
 
         [link target=*tag_sleep_gate] →寝る [endlink][r]
-        [link target=*tag_run_2] →走る [endlink][r]
+        [link target=*tag_run_kawa] →走る [endlink][r]
         [s]
 
     [endif]
