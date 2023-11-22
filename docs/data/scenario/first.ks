@@ -26,7 +26,7 @@
 
 [bg storage=img0.jpg time=500]
 
-メロスは休んだ。[l]
+メロスは休んだ。[r]
 残り体力：[emb exp="hp+10"][r]
 残り時間：[emb exp="jikan-10"]時間[r]
 セリヌンティウスまであと[emb exp="kyori"]km[r]
@@ -43,10 +43,10 @@
 [bg storage=run.jpg time=500]
 
 [cm]
-メロスは走った。[l]
-残り体力：[emb exp="hp-10"][l]
-残り時間：[emb exp="jikan-10"]時間[l]
-セリヌンティウスまであと[emb exp="kyori-10"]km[l]
+メロスは走った。[r]
+残り体力：[emb exp="hp-10"][r]
+残り時間：[emb exp="jikan-10"]時間[r]
+セリヌンティウスまであと[emb exp="kyori-10"]km[r]
 
 [link target=*tag_sleep_1] →寝る [endlink][r]
 [link target=*tag_run_1] →走る [endlink][r]
