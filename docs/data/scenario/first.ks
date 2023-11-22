@@ -401,6 +401,7 @@
     [endif]
 
 *event_nohara
+    [cm]
     ???「ああ、メロス様。」
     この声は…
     [link target=*tag_seikai] →フィロストラトスか？ [endlink][r]
@@ -438,7 +439,7 @@
 
     [endif]
 
-    *tag_seikai
+*tag_seikai
 
     [cm]
             
