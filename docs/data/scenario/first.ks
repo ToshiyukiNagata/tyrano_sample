@@ -14,7 +14,7 @@
 
     残り体力：[emb exp="hp"][r]
     残り時間：[emb exp="jikan"]時間[r]
-    セリヌンティウスまであと[emb exp="kyori"]km[l]
+    セリヌンティウスまであと[emb exp="kyori"]km[l][r]
 
     [link target=*tag_sleep_1] →寝る [endlink][r]
     [link target=*tag_run_1] →走る [endlink][r]
@@ -26,9 +26,9 @@
 
     [bg storage=img0.jpg time=500]
 
-    [eval exp="hp = 100+10"]
-    [eval exp="jikan = 100-10"]
-    [eval exp="kyori = 50"]
+    [eval exp="hp = hp+10"]
+    [eval exp="jikan = jikan-10"]
+    [eval exp="kyori = kyori"]
 
     メロスは休んだ。[r]
     残り体力：[emb exp="hp"][r]
@@ -46,9 +46,9 @@
 
     [bg storage=run.jpg time=500]
     
-    [eval exp="hp = 100-10"]
-    [eval exp="jikan = 100-10"]
-    [eval exp="kyori = 50-10"]
+    [eval exp="hp = hp-10"]
+    [eval exp="jikan = jikan-10"]
+    [eval exp="kyori = kyori-10"]
 
     [cm]
     メロスは走った。[r]
