@@ -23,42 +23,51 @@
 *tag_sleep_1
 
     [cm]
+    [if exp="hp = 0"]
+        [jump target=*gameover]
+    [else]
+        [bg storage=run.jpg time=500]
+        [bg storage=img0.jpg time=500]
 
-    [bg storage=img0.jpg time=500]
+        [eval exp="hp = hp+10"]
+        [eval exp="jikan = jikan-10"]
+        [eval exp="kyori = kyori"]
 
-    [eval exp="hp = hp+10"]
-    [eval exp="jikan = jikan-10"]
-    [eval exp="kyori = kyori"]
+        メロスは休んだ。[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと[emb exp="kyori"]km[r]
 
-    メロスは休んだ。[r]
-    残り体力：[emb exp="hp"][r]
-    残り時間：[emb exp="jikan"]時間[r]
-    セリヌンティウスまであと[emb exp="kyori"]km[r]
+        [link target=*tag_sleep_1] →寝る [endlink][r]
+        [link target=*tag_run_1] →走る [endlink][r]
+        [s]
 
-    [link target=*tag_sleep_1] →寝る [endlink][r]
-    [link target=*tag_run_1] →走る [endlink][r]
-    [s]
-
-    [cm]
+        [cm]
 
 
 *tag_run_1
+    [if exp="hp = 0"]
+        [jump target=*gameover]
+    [else]
+        [bg storage=run.jpg time=500]
+        
+        [eval exp="hp = hp-10"]
+        [eval exp="jikan = jikan-10"]
+        [eval exp="kyori = kyori-10"]
 
-    [bg storage=run.jpg time=500]
-    
-    [eval exp="hp = hp-10"]
-    [eval exp="jikan = jikan-10"]
-    [eval exp="kyori = kyori-10"]
+        [cm]
+        メロスは走った。[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと[emb exp="kyori"]km[r]
 
-    [cm]
-    メロスは走った。[r]
-    残り体力：[emb exp="hp"][r]
-    残り時間：[emb exp="jikan"]時間[r]
-    セリヌンティウスまであと[emb exp="kyori"]km[r]
+        [link target=*tag_sleep_1] →寝る [endlink][r]
+        [link target=*tag_run_1] →走る [endlink][r]
+        [s]
 
-    [link target=*tag_sleep_1] →寝る [endlink][r]
-    [link target=*tag_run_1] →走る [endlink][r]
+        [cm]
+*gameover
+    ゲームオーバーです。[r]
+    [link target=*start] やり直す[endlink][r]
     [s]
-
-    [cm]
 
