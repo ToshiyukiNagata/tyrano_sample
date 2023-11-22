@@ -7,14 +7,11 @@
 
 「走るか寝るかするメロス」[l][r]
 
-メロスは激怒した。[l][r]
+メロスは出発した。[l][r]
+[eval exp="hp = 100"]
+[eval exp="time = 100"]
 
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
-
-(中略)[l][r]
-
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。[l][r]
-メロスは何をした？[l][r]
+残り体力：[emb exp="hp"][l][r]
 
 [link target=*tag_sleep] →寝る [endlink][r]
 [link target=*tag_run] →走る [endlink][r]
