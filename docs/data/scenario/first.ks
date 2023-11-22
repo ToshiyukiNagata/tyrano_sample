@@ -43,7 +43,7 @@
         [s]
 
         [cm]
-
+    [endif]
 
 *tag_run_1
     [if exp="hp = 0"]
@@ -66,6 +66,7 @@
         [s]
 
         [cm]
+    [endif]
 *gameover
     ゲームオーバーです。[r]
     [link target=*start] やり直す[endlink][r]
