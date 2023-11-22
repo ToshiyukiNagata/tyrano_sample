@@ -97,7 +97,7 @@
         セリヌンティウスまであと40km[r][r]
 
         [link target=*tag_sleep_gate] →寝る [endlink][r]
-        [link target=*tag_run_kawa] →走る [endlink][r]
+        [link target=*event_kawa] →走る [endlink][r]
         [s]
 
     [endif]
@@ -125,7 +125,7 @@
         セリヌンティウスまであと40km[r][r]
 
         [link target=*tag_sleep_gate] →寝る [endlink][r]
-        [link target=*tag_run_kawa] →走る [endlink][r]
+        [link target=*event_kawa] →走る [endlink][r]
         [s]
 
     [endif]
@@ -150,7 +150,7 @@
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*tag_run_touge] →走る [endlink][r]
+        [link target=*event_touge] →走る [endlink][r]
         [s]
 
     [endif]
@@ -179,7 +179,7 @@
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*tag_run_touge] →走る [endlink][r]
+        [link target=*event_touge] →走る [endlink][r]
         [s]
 
     [endif]
@@ -204,7 +204,7 @@
         セリヌンティウスまであと20km[r][r]
 
         [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*tag_run_nohara] →走る [endlink][r]
+        [link target=*event_nohara] →走る [endlink][r]
         [s]
 
     [endif]
@@ -234,7 +234,7 @@
         [r]
 
         [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*tag_run_nohara] →走る [endlink][r]
+        [link target=*event_nohara] →走る [endlink][r]
         [s]
 
     [endif]
