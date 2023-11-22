@@ -6,6 +6,7 @@
     [freeimage layer="base"]
     
     [cm]
+    [bg storage=ie.jpg time=500]
 
     「走るか寝るかするメロス」[l][r]
     現在地：妹の家[r]
@@ -25,7 +26,7 @@
 *gameover_hitpoint
     
     [cm]
-
+    [bg storage=touzoku_lose.jpg time=500]
     体力切れでゲームオーバーです。[r]
     [link target=*start] やり直す[endlink][r]
     [s]
@@ -33,21 +34,21 @@
 *gameover_time
 
     [cm]
-
+    [bg storage=time0.jpg time=500]
     時間切れでゲームオーバーです。[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 
 *gameover_touzoku
     [cm]
-
+    [bg storage=touzoku_lose.jpg time=500]
     盗賊に負けてしまった…[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 *clear_meet
 
     [cm]
-
+    [bg storage=clear_meet.jpg time=500]
     クリア。[r]
     [link target=*start] 初めからやり直す[endlink][r]
     [s]
@@ -62,8 +63,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
-    
+        [bg storage=sleep.jpg time=500]
         現在地：妹の家[r]
         NEXT：村の入り口[r]
         メロスは休んだ。[r]
@@ -80,6 +80,7 @@
 *tag_sleep_gate
 
     [cm]
+    [bg storage=kaihuku.jpg time=500]
     [eval exp="hp = hp+10"]
     [eval exp="jikan = jikan-10"]
     [if exp="hp < 1"]
@@ -87,8 +88,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
-        
+        [bg storage=kaihuku.jpg time=500]  
         メロスは休んだ。[r]
         現在地：村の入り口[r]
         NEXT：村はずれの川[r]
@@ -114,9 +114,9 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=run.jpg time=500]
-
         
+
+        [bg storage=gate.jpg time=500] 
         メロスは走った。[r]
         現在地：村の入り口[r]
         NEXT：村はずれの川[r]
@@ -140,7 +140,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
+        [bg storage=kaihuku.jpg time=500] 
         
         メロスは休んだ。[r]
         現在地：村はずれの川[r]
@@ -167,7 +167,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=run.jpg time=500]
+        [bg storage=kawa.jpg time=500] 
 
         [cm]
         
@@ -194,7 +194,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
+        [bg storage=kaihuku.jpg time=500] 
         
         メロスは休んだ。[r]
         現在地：峠[r]
@@ -221,7 +221,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=run.jpg time=500]
+        [bg storage=touge.jpg time=500] 
 
         [cm]
         
@@ -249,7 +249,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
+        [bg storage=kaihuku.jpg time=500] 
         メロスは休んだ。[r]
         現在地：野原[r]
         NEXT：シラクス処刑場[r]
@@ -274,7 +274,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=run.jpg time=500]
+        [bg storage=nohara.jpg time=500] 
 
         [cm]
         メロスは走った。[r]
@@ -291,7 +291,7 @@
     [endif]
 *event_kawa
     [cm]
-
+    [bg storage=kawa.jpg time=500] 
     川が反乱を起こしている…[r]
     [link target=*tag_ukai_kawa] →迂回する [endlink][r]
     [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r]
@@ -305,7 +305,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
+        [bg storage=tag_ukai_kawa.jpg time=500] 
         
         時間はかかったが何とか迂回できた。[r]
         現在地：村はずれの川[r]
@@ -328,7 +328,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
+        [bg storage=tag_ukai_kawa.jpg time=500] 
         
         なんとか泳ぎ切った…[r]
         現在地：村はずれの川[r]
@@ -345,7 +345,7 @@
 
 *event_touge
     [cm]
-
+    [bg storage=touzoku.jpg time=500] 
     山賊が現れた！[r]
     [link target=*tag_tatakau_touge] →戦う [endlink][r]
     [link target=*tag_nigeru_touge] →逃げる [endlink][r]
@@ -360,7 +360,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=img0.jpg time=500]
+        [bg storage=touge.jpg time=500]
         
         なんとか逃げ切った…[r]
         現在地：村はずれの川[r]
@@ -374,19 +374,20 @@
         [s]
 
     [endif]
-    
+
 *tag_tatakau_touge
     [cm]
     [eval exp="hp = hp"]
     [eval exp="jikan = jikan-10"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
-    [elsif exp="jikan < 1"]
-        [jump target=*gameover_time]
     [elsif exp="hp < 50"]
         [jump target=*gameover_touzoku]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    
     [else]
-        [bg storage=img0.jpg time=500]
+        [bg storage=touzoku_win.jpg time=500]
         
         盗賊に勝利した！[r]
         現在地：村はずれの川[r]
@@ -403,6 +404,7 @@
 
 *event_nohara
     [cm]
+    [bg storage=noharaeve.jpg time=500] 
     ???「ああ、メロス様。」[r]
     この声は…[r]
     [link target=*tag_seikai] →フィロストラトスか？ [endlink][r]
@@ -413,8 +415,7 @@
 
 *tag_huseikai
 
-    [cm]
-            
+    [cm] 
     [eval exp="hp = hp"]
     [eval exp="jikan = jikan"]
 
@@ -423,7 +424,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=run.jpg time=500]
+        [bg storage=tag_huseikai.jpg time=500]
 
         [cm]
         ???「あ、違います。」
@@ -452,7 +453,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=run.jpg time=500]
+        [bg storage=seikai.jpg time=500]
 
         [cm]
         フィロストラトス「もう、ダメでございます。走るのはやめてください。」[r]
