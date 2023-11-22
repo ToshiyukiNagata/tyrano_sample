@@ -5,8 +5,6 @@
     [wait time=200]
     [freeimage layer="base"]
 
-    [freeimage]
-    [cm]
 
     「走るか寝るかするメロス」[l][r]
 
