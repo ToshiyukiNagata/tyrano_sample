@@ -315,7 +315,7 @@
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*tag_run_touge] →走る [endlink][r]
+        [link target=*event_touge] →走る [endlink][r]
         [s]
 
     [endif]
@@ -338,7 +338,7 @@
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*tag_run_touge] →走る [endlink][r]
+        [link target=*event_touge] →走る [endlink][r]
         [s]
 
     [endif]
@@ -370,7 +370,7 @@
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*tag_run_nohara] →走る [endlink][r]
+        [link target=*event_nohara] →走る [endlink][r]
         [s]
 
     [endif]
@@ -463,7 +463,6 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと10km[r]
-        [r]
         [link target=*tag_sleep_nohara] →寝る [endlink][r]
         [link target=*clear_meet] →走る [endlink][r]
         [s]
