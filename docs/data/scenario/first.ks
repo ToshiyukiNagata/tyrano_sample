@@ -424,7 +424,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=tag_huseikai.jpg time=500]
+        [bg storage=huseikai.jpg time=500]
 
         [cm]
         ???「あ、違います。」
