@@ -401,5 +401,71 @@
     [endif]
 
 *event_nohara
+    ???「ああ、メロス様。」
+    この声は…
+    [link target=*tag_seikai] →フィロストラトスか？ [endlink][r]
+    [link target=*tag_huseikai] →アレキスか？ [endlink][r]
+    [link target=*tag_huseikai] →ディオニスか？ [endlink][r]
+    [link target=*tag_huseikai] →セリヌンティウスか？ [endlink][r]
+    [s]
+
+*tag_huseikai
+
+    [cm]
+            
+    [eval exp="hp = hp"]
+    [eval exp="jikan = jikan"]
+
+    [if exp="hp < 1"]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [else]
+        [bg storage=run.jpg time=500]
+
+        [cm]
+        ???「あ、違います。」
+        少年は寂しそうに去っていった。[r]
+        現在地：野原[r]
+        NEXT：シラクス処刑場[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと10km[r]
+        [r]
+        [link target=*tag_sleep_nohara] →寝る [endlink][r]
+        [link target=*clear_meet] →走る [endlink][r]
+        [s]
+
+    [endif]
+
+    *tag_seikai
+
+    [cm]
+            
+    [eval exp="hp = hp+10"]
+    [eval exp="jikan = jikan"]
+
+    [if exp="hp < 1"]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [else]
+        [bg storage=run.jpg time=500]
+
+        [cm]
+        フィロストラトス「もう、ダメでございます。走るのはやめてください。」[r]
+        メロス「いや、まだ陽は沈まぬ。」[r]
+        現在地：野原[r]
+        NEXT：シラクス処刑場[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと10km[r]
+        [r]
+        [link target=*tag_sleep_nohara] →寝る [endlink][r]
+        [link target=*clear_meet] →走る [endlink][r]
+        [s]
+
+    [endif]
+
 
 
