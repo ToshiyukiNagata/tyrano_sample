@@ -63,8 +63,6 @@
     NEXT：村の入り口[r]
     ついに今日からスタートだ。[r]
     メロスはどうする？[r]
-    [eval exp="hp = 100"]
-    [eval exp="jikan = 100"]
 
     残り体力：[emb exp="hp"][r]
     残り時間：[emb exp="jikan"]時間[r]
