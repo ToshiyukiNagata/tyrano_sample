@@ -67,7 +67,10 @@
         [cm]
     [endif]
 *gameover
+    [cm]
+
     ゲームオーバーです。[r]
     [link target=*start] やり直す[endlink][r]
     [s]
+    [cm]
 
