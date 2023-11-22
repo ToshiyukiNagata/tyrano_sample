@@ -218,6 +218,7 @@
 
         [link target=*tag_sleep_4] →寝る [endlink][r]
         [link target=*clear_meet]
+    [endif]
 
 *tag_run_4
     
