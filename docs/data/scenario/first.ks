@@ -305,7 +305,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=tag_ukai_kawa.jpg time=500] 
+        [bg storage=ukaikawa.jpg time=500] 
         
         時間はかかったが何とか迂回できた。[r]
         現在地：村はずれの川[r]
@@ -328,7 +328,7 @@
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
     [else]
-        [bg storage=ukai_kawa.jpg time=500] 
+        [bg storage=ukaikawa.jpg time=500] 
         
         なんとか泳ぎ切った…[r]
         現在地：村はずれの川[r]
