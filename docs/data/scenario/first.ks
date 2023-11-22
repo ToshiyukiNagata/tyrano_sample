@@ -9,28 +9,30 @@
 
 メロスは出発した。[l][r]
 [eval exp="hp = 100"]
-[eval exp="time = 100"]
+[eval exp="jikan = 100"]
+[eval exp="jikan = 50"]
 
-残り体力：[emb exp="hp"][l][r]
+残り体力：[emb exp="hp"][l]
+残り時間：[emb exp="jikan"]時間[l]
+セリヌンティウスまであと[emb exp="kyori"]km[l]
 
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+[link target=*tag_sleep_1] →寝る [endlink][r]
+[link target=*tag_run_1] →走る [endlink][r]
 [s]
 
-*tag_sleep
+*tag_sleep_1
 
 [cm]
 
 [bg storage=img0.jpg time=500]
 
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
 
-【 BAD END 】[l][cm]
+
+[cm]
 
 [jump target=*start]
 
-*tag_run
+*tag_run_1
 
 [bg storage=run.jpg time=500]
 
