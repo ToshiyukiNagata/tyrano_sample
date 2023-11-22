@@ -98,7 +98,7 @@
         [s]
 
     [endif]
-    
+
 *tag_sleep_2
 
     [freeimage]
@@ -115,7 +115,7 @@
         メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと50km[r]
+        セリヌンティウスまであと40km[r]
 
         [link target=*tag_sleep_2] →寝る [endlink][r]
         [link target=*tag_run_3] →走る [endlink][r]
@@ -166,7 +166,7 @@
         メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと50km[r]
+        セリヌンティウスまであと30km[r]
 
         [link target=*tag_sleep_3] →寝る [endlink][r]
         [link target=*tag_run_4] →走る [endlink][r]
@@ -217,10 +217,11 @@
         メロスは休んだ。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと50km[r]
+        セリヌンティウスまであと10km[r]
 
         [link target=*tag_sleep_4] →寝る [endlink][r]
-        [link target=*clear_meet]
+        [link target=*clear_meet]→走る [endlink][r]
+        [s]
     [endif]
 
 *tag_run_4
@@ -242,7 +243,7 @@
         メロスは走った。[r]
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
-        セリヌンティウスまであと20km[r]
+        セリヌンティウスまであと10km[r]
 
         [link target=*tag_sleep_3] →寝る [endlink][r]
         [link target=*clear_meet] →走る [endlink][r]
