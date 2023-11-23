@@ -44,7 +44,7 @@
         所持金：[emb exp="money"]G[r]
         残りターン：[emb exp="countdown"][r]
         今日は…[r][r]
-        [link target=*train] →体を鍛える。(戦闘力+10,体力-10)[endlink][r]
+        [link target=*train] →体を鍛える。(戦闘力+30,体力-10)[endlink][r]
         [link target=*cure] →休む。(体力+10) [endlink][r]
         [link target=*pray] →教会に行く。 [endlink][r]
         [link target=*work] →バイトをする。(所持金+100G,体力-10) [endlink][r]
