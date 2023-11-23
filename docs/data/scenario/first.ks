@@ -1,6 +1,6 @@
 *start
 
-    [title name="走るか寝るかするメロス2"]
+    [title name="メロ娘"]
     [hidemenubutton]
     [wait time=200]
     [freeimage layer="base"]
@@ -14,8 +14,9 @@
     [eval exp="countdown = 5"]
     
 
-    「走るか寝るかするメロス」[l][r]
+    「メロ娘」[l][r]
     [link target=*before_start] →スタート [endlink][r]
+    [link target=*rule] →ルール [endlink][r]
     [s]
 
 *before_start
@@ -58,7 +59,9 @@
     教会で祈りをささげた。[r]
     災難を回避できる気がする…[l][r]
     [jump target=*before_start]
-    
+*rule
+    [link target=*start] →スタート画面にに戻る [endlink][r]
+
 *after_start
     [cm]
     [bg storage=ie.jpg time=500]
@@ -344,10 +347,17 @@
 *event_kawa
     [cm]
     [bg storage=kawa.jpg time=500] 
-    川が反乱を起こしている…[r]
-    [link target=*tag_ukai_kawa] →迂回する [endlink][r]
-    [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r]
-    [s]
+    [if exp="hp <= 0"]
+        川が氾濫を起こしている…[r]
+        [link target=*tag_ukai_kawa] →迂回する [endlink][r]
+        [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r]
+        [s]
+    [else]
+        川が氾濫を起こしている…[r]
+        [link target=*tag_ukai_kawa] →迂回する [endlink][r]
+        [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r] 
+        [link target=*tag_inoru_kawa] →収まるように祈る [endlink][r] 
+
 *tag_ukai_kawa
     [cm]
     [eval exp="hp = hp-10"]
@@ -394,6 +404,31 @@
         [s]
 
     [endif]
+
+tag_inoru_kawa
+    [cm]
+    [eval exp="hp = hp"]
+    [eval exp="jikan = jikan"]
+    [if exp="hp < 1"]
+        [jump target=*gameover_hitpoint]
+    [elsif exp="jikan < 1"]
+        [jump target=*gameover_time]
+    [else]
+        [bg storage=ukaikawa.jpg time=500] 
+        
+        すぐに川の氾濫が収まった！[r]
+        現在地：村はずれの川[r]
+        NEXT：峠[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと30km[r][r]
+
+        [link target=*tag_sleep_kawa] →寝る [endlink][r]
+        [link target=*event_touge] →走る [endlink][r]
+        [s]
+
+    [endif]
+
 
 *event_touge
     [cm]
