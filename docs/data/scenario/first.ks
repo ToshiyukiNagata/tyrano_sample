@@ -609,6 +609,7 @@
     [endif]
 *king_fight
     [cm]
+    [bg storage=huseikai.jpg time=500]
     王が現れた！
     残り体力：[emb exp="hp"][r]
     戦闘力：[emb exp="power"][r]
