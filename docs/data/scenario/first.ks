@@ -37,6 +37,7 @@
     [endif]
 *train
     [cm]
+    [bg storage=train.jpg time=500]
     [eval exp="countdown = countdown - 1"]
     [eval exp="power = power + 10"]
     [eval exp="hp = hp - 10"]
@@ -44,12 +45,14 @@
     [jump target=*before_start]
 *cure
     [cm]
+    [bg storage=sleep.jpg time=500]
     [eval exp="countdown = countdown - 1"]
     [eval exp="hp = hp + 10"]
     体を休めた。[l]
     [jump target=*before_start]
 *pray
     [cm]
+    [bg storage=pray.jpg time=500]
     [eval exp="countdown = countdown - 1"]
     [eval exp="luck = luck + 1"]
     教会で祈りをささげた。[r]
