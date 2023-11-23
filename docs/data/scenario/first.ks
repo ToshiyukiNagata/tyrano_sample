@@ -651,7 +651,7 @@
 
     [cm]
             
-    [eval exp="hp = hp+10"]
+    [eval exp="hp = hp+30"]
     [eval exp="jikan = jikan"]
 
     [if exp="hp < 1"]
