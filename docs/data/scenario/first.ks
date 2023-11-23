@@ -6,7 +6,7 @@
     [freeimage layer="base"]
     
     [cm]
-    [bg storage=ie.jpg time=500]
+    [bg storage=opening.jpg time=500]
     [eval exp="hp = 100"]
     [eval exp="jikan = 100"]
     [eval exp="power = 100"]
