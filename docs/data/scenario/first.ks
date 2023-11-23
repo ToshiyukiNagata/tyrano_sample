@@ -409,7 +409,7 @@
 
     [endif]
 
-tag_inoru_kawa
+*tag_inoru_kawa
     [cm]
     [eval exp="hp = hp"]
     [eval exp="jikan = jikan"]
