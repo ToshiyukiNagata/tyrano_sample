@@ -77,6 +77,8 @@
     運が上がった。[l][r]
     [jump target=*before_start]
 *ok_start
+    [cm]
+    [bg storage=ie.jpg time=500]
     準備は完了した。[r]
     50㎞先にいるセリヌンティウスのもとへ向かおう。[r]
     [link target=*after_start] →出走！ [endlink][r]
