@@ -8,7 +8,7 @@
     [cm]
     [bg storage=opening.jpg time=500]
     [eval exp="hp = 100"]
-    [eval exp="jikan = 100"]
+    [eval exp="jikan = 10"]
     [eval exp="power = 100"]
     [eval exp="luck = 0"]
     [eval exp="countdown = 5"]
@@ -110,8 +110,8 @@
     所持金：[emb exp="money"]G[r]
     セリヌンティウスまであと50km[r][r]
 
-    [link target=*tag_sleep_ie] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*tag_run_gate] →走る(体力-10,時間-10,距離-10km)[endlink][r]
+    [link target=*tag_sleep_ie] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*tag_run_gate] →走る(体力-10,時間-1,距離-10km)[endlink][r]
     [s]
 
 *gameover_hitpoint
@@ -139,7 +139,7 @@
     [bg storage=touzoku_lose.jpg time=500]
     盗賊に負けてしまった…[r]
     【BadEnd3:最初の敗北】[r]
-    （Hint1:盗賊に勝つには体力と戦闘力の和が300以上必要。）[r]
+    （Hint1:盗賊に勝つには体力と戦闘力の和が100以上必要。）[r]
     （Hint2:盗賊を帰すには100Gが必要。）[r]
     [link target=*start] やり直す[endlink][r]
     [s]
@@ -157,7 +157,7 @@
     [cm]
     [bg storage=clear_meet.jpg time=500]
 
-    クリア。[r]
+    セリヌンティウスを無事救出した。[r]
     【GoodEnd:再会】[r]
     [link target=*start] 初めからやり直す[endlink][r]
     [s]
@@ -173,7 +173,7 @@
 
     [cm]
     [eval exp="hp = hp+10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -190,8 +190,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと50km[r][r]
 
-    [link target=*tag_sleep_ie] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*tag_run_gate] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [link target=*tag_sleep_ie] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*tag_run_gate] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
     [s]
     [endif]
 
@@ -200,7 +200,7 @@
     [cm]
     [bg storage=kaihuku.jpg time=500]
     [eval exp="hp = hp+10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -216,8 +216,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと40km[r][r]
 
-    [link target=*tag_sleep_gate] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*event_kawa] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [link target=*tag_sleep_gate] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*event_kawa] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
     [s]
     [endif]
 
@@ -226,7 +226,7 @@
     [cm]
             
     [eval exp="hp = hp-10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
 
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
@@ -245,8 +245,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと40km[r][r]
 
-    [link target=*tag_sleep_gate] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*event_kawa] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [link target=*tag_sleep_gate] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*event_kawa] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
     [s]
     [endif]
 
@@ -254,7 +254,7 @@
 
     [cm]
     [eval exp="hp = hp+10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -271,8 +271,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
-    [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*event_touge] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [link target=*tag_sleep_kawa] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*event_touge] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
     [s]
     [endif]
 
@@ -281,7 +281,7 @@
     [cm]
             
     [eval exp="hp = hp-10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
 
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
@@ -301,8 +301,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
-    [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*event_touge] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [link target=*tag_sleep_kawa] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*event_touge] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
     [s]
     [endif]
 
@@ -310,7 +310,7 @@
 
     [cm]
     [eval exp="hp = hp+10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -327,8 +327,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
-    [link target=*tag_sleep_touge] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [link target=*tag_sleep_touge] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*event_nohara] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
     [s]
     [endif]
 
@@ -337,7 +337,7 @@
     [cm]
             
     [eval exp="hp = hp-10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
 
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
@@ -357,8 +357,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
-    [link target=*tag_sleep_touge] →寝る(体力+10,時間-10) [endlink][r]
-    [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [link target=*tag_sleep_touge] →寝る(体力+10,時間-1) [endlink][r]
+    [link target=*event_nohara] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
     [s]
     [endif]
 
@@ -366,7 +366,7 @@
 
     [cm]
     [eval exp="hp = hp+10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -381,8 +381,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r][r]
-        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10) [endlink][r]
-        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-1) [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
         [s]
     [endif]
 
@@ -391,7 +391,7 @@
     [cm]
             
     [eval exp="hp = hp-10"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
 
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
@@ -409,8 +409,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r][r]
-        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10) [endlink][r]
-        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-1) [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-1,距離-10km)[endlink][r]        [s]
         [s]
 
     [endif]
@@ -419,13 +419,13 @@
     [bg storage=kawa.jpg time=500] 
     [if exp="luck <= 0"]
         川が氾濫を起こしている…[r]
-        [link target=*tag_ukai_kawa] →迂回する(体力-10,時間-20)[endlink][r]
-        [link target=*tag_susumu_kawa] →川を突っ切る(体力-20,時間-10) [endlink][r]
+        [link target=*tag_ukai_kawa] →迂回する(体力-10,時間-2)[endlink][r]
+        [link target=*tag_susumu_kawa] →川を突っ切る(体力-20,時間-1) [endlink][r]
         [s]
     [else]
         川が氾濫を起こしている…[r]
-        [link target=*tag_ukai_kawa] →迂回する(体力-10,時間-20) [endlink][r]
-        [link target=*tag_susumu_kawa] →川を突っ切る(体力-20,時間-10) [endlink][r] 
+        [link target=*tag_ukai_kawa] →迂回する(体力-10,時間-2) [endlink][r]
+        [link target=*tag_susumu_kawa] →川を突っ切る(体力-20,時間-1) [endlink][r] 
         [link target=*tag_inoru_kawa] →収まるように祈る [endlink][r]
         [s]
     [endif] 
@@ -433,7 +433,7 @@
 *tag_ukai_kawa
     [cm]
     [eval exp="hp = hp-10"]
-    [eval exp="jikan = jikan-20"]
+    [eval exp="jikan = jikan-2"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -450,15 +450,15 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*event_touge] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*event_touge] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
 *tag_susumu_kawa
     [cm]
     [eval exp="hp = hp-20"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -475,8 +475,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*event_touge] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*event_touge] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -501,8 +501,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*event_touge] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*event_touge] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -517,14 +517,14 @@
     戦闘力：[emb exp="power"][r]
     所持金：[emb exp="money"][r][r]
     [link target=*tag_tatakau_touge] →戦う [endlink][r]
-    [link target=*tag_nigeru_touge] →逃げる(体力-20,時間-10)  [endlink][r]
+    [link target=*tag_nigeru_touge] →逃げる(体力-20,時間-1)  [endlink][r]
     [link target=*tag_kane_touge] →金を渡す(所持金-100G) [endlink][r]
     [s]
 
 *tag_nigeru_touge
     [cm]
     [eval exp="hp = hp-20"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
@@ -541,8 +541,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_touge] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*event_nohara] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -550,10 +550,10 @@
 *tag_tatakau_touge
     [cm]
     [eval exp="hp = hp"]
-    [eval exp="jikan = jikan-10"]
+    [eval exp="jikan = jikan-1"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
-    [elsif exp="hp + power < 50"]
+    [elsif exp="hp + power <100"]
         [jump target=*gameover_touzoku]
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
@@ -570,8 +570,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_touge] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*event_nohara] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -584,7 +584,7 @@
         [eval exp="money = money-100"]
         [cm]
         [eval exp="hp = hp"]
-        [eval exp="jikan = jikan-10"]
+        [eval exp="jikan = jikan-1"]
         所持金のうち100Gを渡した。[l][r]
         現在地：峠[r]
         NEXT：野原[r]
@@ -594,8 +594,8 @@
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_touge] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*event_nohara] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -634,8 +634,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r][r]
-        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -667,8 +667,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r]
-        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10)  [endlink][r]
-        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km) [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-1)  [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-1,距離-10km) [endlink][r]
         [s]
 
     [endif]
