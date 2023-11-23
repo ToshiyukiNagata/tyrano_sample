@@ -63,7 +63,7 @@
     [cm]
     [link target=*start] →スタート画面にに戻る [endlink][r]
     [s]
-    
+
 *after_start
     [cm]
     [bg storage=ie.jpg time=500]
@@ -349,7 +349,7 @@
 *event_kawa
     [cm]
     [bg storage=kawa.jpg time=500] 
-    [if exp="hp <= 0"]
+    [if exp="luck <= 0"]
         川が氾濫を起こしている…[r]
         [link target=*tag_ukai_kawa] →迂回する [endlink][r]
         [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r]
@@ -359,6 +359,7 @@
         [link target=*tag_ukai_kawa] →迂回する [endlink][r]
         [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r] 
         [link target=*tag_inoru_kawa] →収まるように祈る [endlink][r]
+        [s]
     [endif] 
 
 *tag_ukai_kawa
