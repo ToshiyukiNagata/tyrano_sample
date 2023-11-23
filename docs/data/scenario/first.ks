@@ -356,7 +356,8 @@
         川が氾濫を起こしている…[r]
         [link target=*tag_ukai_kawa] →迂回する [endlink][r]
         [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r] 
-        [link target=*tag_inoru_kawa] →収まるように祈る [endlink][r] 
+        [link target=*tag_inoru_kawa] →収まるように祈る [endlink][r]
+    [endif] 
 
 *tag_ukai_kawa
     [cm]
