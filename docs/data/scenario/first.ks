@@ -9,7 +9,7 @@
     [bg storage=opening.jpg time=500]
     [eval exp="hp = 100"]
     [eval exp="jikan = 10"]
-    [eval exp="power = 100"]
+    [eval exp="power = 0"]
     [eval exp="luck = 0"]
     [eval exp="countdown = 5"]
     [eval exp="money = 0"]
@@ -47,7 +47,7 @@
         [link target=*train] →体を鍛える。(戦闘力+30,体力-10)[endlink][r]
         [link target=*cure] →休む。(体力+10) [endlink][r]
         [link target=*pray] →教会に行く。 [endlink][r]
-        [link target=*work] →バイトをする。(所持金+100G,体力-10) [endlink][r]
+        [link target=*work] →バイトをする。(所持金+80G,体力-10) [endlink][r]
         [s]
     [endif]
 *train
@@ -83,9 +83,10 @@
     [cm]
     [bg storage=money.jpg time=500]
     [eval exp="countdown = countdown - 1"]
-    [eval exp="money = money + 100"]
+    [eval exp="money = money + 80"]
+    [eval exp="hp = hp - 10"]
     教会の清掃をした。[r]
-    所持金が100G増えた。体力が10減った。[l][r]
+    所持金が80G増えた。体力が10減った。[l][r]
     [jump target=*before_start]
 
 *ok_start
