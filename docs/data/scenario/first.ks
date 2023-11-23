@@ -62,7 +62,8 @@
 *rule
     [cm]
     [link target=*start] →スタート画面にに戻る [endlink][r]
-
+    [s]
+    
 *after_start
     [cm]
     [bg storage=ie.jpg time=500]
