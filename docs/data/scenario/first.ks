@@ -524,7 +524,7 @@
 *tag_nigeru_touge
     [cm]
     [eval exp="hp = hp-20"]
-    [eval exp="jikan = jikan-1"]
+    [eval exp="jikan = jikan-2"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
