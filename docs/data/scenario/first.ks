@@ -103,7 +103,9 @@
     
     [cm]
     [bg storage=touzoku_lose.jpg time=500]
-    体力切れでゲームオーバーです。[r]
+    体力がもう無い。[r]
+    メロスは地面に倒れ、深く眠った。[r]
+    【BadEnd1:疲弊】[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 
@@ -111,7 +113,9 @@
 
     [cm]
     [bg storage=time0.jpg time=500]
-    時間切れでゲームオーバーです。[r]
+    日が暮れてしまった。[r]
+    セリヌンティウスが処刑されてしまった。[r]
+    【BadEnd2:処刑】[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 
@@ -119,13 +123,24 @@
     [cm]
     [bg storage=touzoku_lose.jpg time=500]
     盗賊に負けてしまった…[r]
+    【BadEnd3:敗北】[r]
+    （Hint:盗賊に勝つには体力と戦闘力の和が300以上必要。）[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 *clear_meet
 
     [cm]
     [bg storage=clear_meet.jpg time=500]
+
     クリア。[r]
+    【GoodEnd:再会】[r]
+    [link target=*start] 初めからやり直す[endlink][r]
+    [s]
+*clear_neet
+    [cm]
+    [bg storage=neet.jpg time=500]
+    セリヌンティウスなど忘れてここで暮らそう。[r]
+    【GoodEnd?:ニート】[r]
     [link target=*start] 初めからやり直す[endlink][r]
     [s]
 
@@ -137,7 +152,7 @@
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
     [elsif exp="jikan < 1"]
-        [jump target=*gameover_time]
+        [jump target=*clear_neet]
     [else]
         [bg storage=sleep.jpg time=500]
         現在地：妹の家[r]
@@ -334,7 +349,7 @@
         セリヌンティウスまであと10km[r]
         [r]
         [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*clear_meet]→走る [endlink][r]
+        [link target=*king_fight]→走る [endlink][r]
         [s]
     [endif]
 
@@ -361,7 +376,7 @@
         セリヌンティウスまであと10km[r]
         [r]
         [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*clear_meet] →走る [endlink][r]
+        [link target=*king_fight] →走る [endlink][r]
         [s]
 
     [endif]
@@ -546,7 +561,7 @@
         セリヌンティウスまであと10km[r]
         [r]
         [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*clear_meet] →走る [endlink][r]
+        [link target=*king_fight] →走る [endlink][r]
         [s]
 
     [endif]
@@ -580,6 +595,22 @@
         [s]
 
     [endif]
+*king_fight
+    [cm]
+    王が現れた！
+    [link target=*king_hantei] →戦う [endlink][r]
+    [s]
+*king_hantei
+    [cm]
+    [if exp="hp + power < 50"]
+        [jump target=*gameover_touzoku]
+    
+    [else]
+        [jump target=*clear_meet]
+
+    [endif]
+
+
 
 
 
