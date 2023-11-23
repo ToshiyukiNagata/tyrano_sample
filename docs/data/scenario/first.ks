@@ -122,7 +122,7 @@
     体力がもう無い。[r]
     メロスは地面に倒れ、深く眠った。[r]
     【BadEnd1:疲弊】[r]
-    [link target=*start] やり直す[endlink][r]
+    [link target=*start] →やり直す[endlink][r]
     [s]
 
 *gameover_time
@@ -132,7 +132,7 @@
     日が暮れてしまった。[r]
     セリヌンティウスが処刑されてしまった。[r]
     【BadEnd2:処刑】[r]
-    [link target=*start] やり直す[endlink][r]
+    [link target=*start] →やり直す[endlink][r]
     [s]
 
 *gameover_touzoku
@@ -142,7 +142,7 @@
     【BadEnd3:最初の敗北】[r]
     （Hint1:盗賊に勝つには体力と戦闘力の和が100以上必要。）[r]
     （Hint2:盗賊を帰すには200Gが必要。）[r]
-    [link target=*start] やり直す[endlink][r]
+    [link target=*start] →やり直す[endlink][r]
     [s]
 *gameover_king
     [cm]
@@ -151,7 +151,7 @@
     【BadEnd4:最後の敗北】[r]
     （Hint1:王に勝つには体力と戦闘力の和が200以上必要。）[r]
     （Hint2:王を懐柔するには400Gが必要。）[r]
-    [link target=*start] やり直す[endlink][r]
+    [link target=*start] →やり直す[endlink][r]
     [s]
 *clear_meet
 
@@ -160,14 +160,14 @@
 
     セリヌンティウスを無事救出した。[r]
     【GoodEnd:再会】[r]
-    [link target=*start] 初めからやり直す[endlink][r]
+    [link target=*start] →初めからやり直す[endlink][r]
     [s]
 *clear_neet
     [cm]
     [bg storage=gorogoro_neet.png time=500]
     セリヌンティウスなど忘れてここで暮らそう。[r]
     【GoodEnd?:ニート】[r]
-    [link target=*start] 初めからやり直す[endlink][r]
+    [link target=*start] →初めからやり直す[endlink][r]
     [s]
 
 *tag_sleep_ie
