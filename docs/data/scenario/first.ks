@@ -417,6 +417,8 @@
     [endif]
 *event_kawa
     [cm]
+    [eval exp="hp = hp-10"]
+    [eval exp="jikan = jikan-1"]
     [bg storage=kawa.jpg time=500] 
     [if exp="luck <= 0"]
         川が氾濫を起こしている…[r]
@@ -511,6 +513,8 @@
 
 *event_touge
     [cm]
+    [eval exp="hp = hp-10"]
+    [eval exp="jikan = jikan-1"]
     [bg storage=touzoku.jpg time=500] 
     山賊が現れた！[r]
     残り体力：[emb exp="hp"][r]
@@ -603,6 +607,8 @@
 
 *event_nohara
     [cm]
+    [eval exp="hp = hp-10"]
+    [eval exp="jikan = jikan-1"]
     [bg storage=noharaeve.jpg time=500] 
     ???「ああ、メロス様。」[r]
     この声は…[r]
@@ -675,6 +681,8 @@
     [endif]
 *king_fight
     [cm]
+    [eval exp="hp = hp-10"]
+    [eval exp="jikan = jikan-1"]
     [bg storage=king.jpg time=500]
     王が現れた！[r]
     残り体力：[emb exp="hp"][r]
