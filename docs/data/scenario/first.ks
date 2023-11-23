@@ -82,6 +82,8 @@
     準備は完了した。[r]
     50㎞先にいるセリヌンティウスのもとへ向かおう。[r]
     [link target=*after_start] →出走！ [endlink][r]
+    [s]
+
 
 *after_start
     [cm]
@@ -480,6 +482,8 @@
     [cm]
     [bg storage=touzoku.jpg time=500] 
     山賊が現れた！[r]
+    残り体力：[emb exp="hp"][r]
+    戦闘力：[emb exp="power"][r]
     [link target=*tag_tatakau_touge] →戦う [endlink][r]
     [link target=*tag_nigeru_touge] →逃げる [endlink][r]
     [s]
@@ -599,13 +603,15 @@
         残り時間：[emb exp="jikan"]時間[r]
         セリヌンティウスまであと10km[r]
         [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*clear_meet] →走る [endlink][r]
+        [link target=*king_fight] →走る [endlink][r]
         [s]
 
     [endif]
 *king_fight
     [cm]
     王が現れた！
+    残り体力：[emb exp="hp"][r]
+    戦闘力：[emb exp="power"][r]
     [link target=*king_hantei] →戦う [endlink][r]
     [s]
 *king_hantei
