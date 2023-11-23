@@ -162,7 +162,7 @@
     [s]
 *clear_neet
     [cm]
-    [bg storage=neet.jpg time=500]
+    [bg storage=neet.png time=500]
     セリヌンティウスなど忘れてここで暮らそう。[r]
     【GoodEnd?:ニート】[r]
     [link target=*start] 初めからやり直す[endlink][r]
@@ -557,12 +557,14 @@
     [endif]
 *tag_kane_touge
     [cm]
-    [if exp="money < 50"]
+    [if exp="money < 100"]
         所持金が足りないようだ。[l][r]
         [jump target=*event_touge]
-    
     [else]
         [eval exp="money = money-100"]
+        [cm]
+        [eval exp="hp = hp"]
+        [eval exp="jikan = jikan-10"]
         所持金のうち100Gを渡した。[l][r]
         現在地：峠[r]
         NEXT：野原[r]
@@ -656,7 +658,7 @@
     [s]
 *king_kane
     [cm]
-    [if exp="money < 50"]
+    [if exp="money < 300"]
         所持金が足りないようだ。[l][r]
         [jump target=*king_fight]
     
