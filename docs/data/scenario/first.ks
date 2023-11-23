@@ -107,7 +107,7 @@
     残り体力：[emb exp="hp"][r]
     残り時間：[emb exp="jikan"]時間[r]
     戦闘力：[emb exp="power"][r]
-    所持金：[emb exp="money"][r]
+    所持金：[emb exp="money"]G[r]
     セリヌンティウスまであと50km[r][r]
 
     [link target=*tag_sleep_ie] →寝る(体力+10,時間-10) [endlink][r]
@@ -187,7 +187,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと50km[r][r]
 
     [link target=*tag_sleep_ie] →寝る(体力+10,時間-10) [endlink][r]
@@ -213,7 +213,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと40km[r][r]
 
     [link target=*tag_sleep_gate] →寝る(体力+10,時間-10) [endlink][r]
@@ -242,7 +242,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと40km[r][r]
 
     [link target=*tag_sleep_gate] →寝る(体力+10,時間-10) [endlink][r]
@@ -268,7 +268,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
     [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10) [endlink][r]
@@ -298,7 +298,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
     [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10) [endlink][r]
@@ -324,7 +324,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
     [link target=*tag_sleep_touge] →寝る(体力+10,時間-10) [endlink][r]
@@ -354,7 +354,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
     [link target=*tag_sleep_touge] →寝る(体力+10,時間-10) [endlink][r]
@@ -379,7 +379,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r][r]
         [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10) [endlink][r]
         [link target=*king_fight] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
@@ -407,7 +407,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r][r]
         [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10) [endlink][r]
         [link target=*king_fight] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
@@ -447,7 +447,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
@@ -472,7 +472,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
@@ -498,7 +498,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと30km[r][r]
 
         [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
@@ -538,7 +538,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
         [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
@@ -567,7 +567,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
         [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
@@ -591,7 +591,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと20km[r][r]
 
         [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
@@ -632,7 +632,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r][r]
         [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10)  [endlink][r]
         [link target=*king_fight] →走る(体力-10,時間-10,距離-10km) [endlink][r]
@@ -665,7 +665,7 @@
         残り体力：[emb exp="hp"][r]
         残り時間：[emb exp="jikan"]時間[r]
         戦闘力：[emb exp="power"][r]
-        所持金：[emb exp="money"][r]
+        所持金：[emb exp="money"]G[r]
         セリヌンティウスまであと10km[r]
         [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10)  [endlink][r]
         [link target=*king_fight] →走る(体力-10,時間-10,距離-10km) [endlink][r]
