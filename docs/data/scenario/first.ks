@@ -141,7 +141,7 @@
     盗賊に負けてしまった…[r]
     【BadEnd3:最初の敗北】[r]
     （Hint1:盗賊に勝つには体力と戦闘力の和が100以上必要。）[r]
-    （Hint2:盗賊を帰すには100Gが必要。）[r]
+    （Hint2:盗賊を帰すには200Gが必要。）[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 *gameover_king
@@ -150,7 +150,7 @@
     王に負けてしまった…[r]
     【BadEnd4:最後の敗北】[r]
     （Hint1:王に勝つには体力と戦闘力の和が200以上必要。）[r]
-    （Hint2:王を懐柔するには300Gが必要。）[r]
+    （Hint2:王を懐柔するには400Gが必要。）[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 *clear_meet
@@ -523,7 +523,7 @@
     所持金：[emb exp="money"][r][r]
     [link target=*tag_tatakau_touge] →戦う [endlink][r]
     [link target=*tag_nigeru_touge] →逃げる(体力-20,時間-1)  [endlink][r]
-    [link target=*tag_kane_touge] →金を渡す(所持金-100G) [endlink][r]
+    [link target=*tag_kane_touge] →金を渡して帰す(所持金-200G) [endlink][r]
     [s]
 
 *tag_nigeru_touge
@@ -582,11 +582,11 @@
     [endif]
 *tag_kane_touge
     [cm]
-    [if exp="money < 100"]
+    [if exp="money < 200"]
         所持金が足りないようだ。[l][r]
         [jump target=*event_touge]
     [else]
-        [eval exp="money = money-100"]
+        [eval exp="money = money-200"]
         [cm]
         [eval exp="hp = hp"]
         [eval exp="jikan = jikan-1"]
@@ -689,11 +689,11 @@
     戦闘力：[emb exp="power"][r]
     所持金：[emb exp="money"]G[r]
     [link target=*king_hantei] →戦う [endlink][r]
-    [link target=*king_kane] →金を渡して懐柔する(所持金-300G) [endlink][r]
+    [link target=*king_kane] →金を渡して懐柔する(所持金-400G) [endlink][r]
     [s]
 *king_kane
     [cm]
-    [if exp="money < 300"]
+    [if exp="money < 400"]
         所持金が足りないようだ。[l][r]
         [jump target=*king_fight]
     
