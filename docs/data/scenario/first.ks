@@ -162,7 +162,7 @@
     [s]
 *clear_neet
     [cm]
-    [bg storage=neet.png time=500]
+    [bg storage=gorogoro_neet.png time=500]
     セリヌンティウスなど忘れてここで暮らそう。[r]
     【GoodEnd?:ニート】[r]
     [link target=*start] 初めからやり直す[endlink][r]
@@ -649,7 +649,7 @@
 *king_fight
     [cm]
     [bg storage=king.jpg time=500]
-    王が現れた！
+    王が現れた！[r]
     残り体力：[emb exp="hp"][r]
     戦闘力：[emb exp="power"][r]
     所持金：[emb exp="money"]G[r]
