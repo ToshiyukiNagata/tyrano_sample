@@ -19,10 +19,21 @@
     [link target=*rule] →ルール [endlink][r]
     [s]
 
+*rule
+    [cm]
+    メロ娘は育成シミュレーションゲームです。[r]
+    5ターンの育成パートの後セリヌンティウスがいる処刑場に向けて走ります。[r]
+    体力が0になる、時間が0になる、道中のイベントに失敗するとゲームオーバーとなります。[r]
+    エンディングはグッドエンドとバッドエンド合わせて6つあります。[r]
+    メロスを育成して「走れメロス」の世界の中を駆け抜けましょう。[r]
+
+    [link target=*start] →スタート画面に戻る [endlink][r]
+    [s]
+
 *before_start
     [if exp="countdown < 1"]
         [cm]
-        [jump target=*after_start]
+        [jump target=*ok_start]
     [else]
         [cm]
         [bg storage=ie.jpg time=500]
@@ -42,14 +53,18 @@
     [eval exp="countdown = countdown - 1"]
     [eval exp="power = power + 10"]
     [eval exp="hp = hp - 10"]
-    体を鍛えた。[l][r]
+    体を鍛えた。[r][r]
+    戦闘力が10上がった。体力が10減った。[l][r]
     [jump target=*before_start]
 *cure
     [cm]
     [bg storage=sleep.jpg time=500]
     [eval exp="countdown = countdown - 1"]
     [eval exp="hp = hp + 10"]
-    体を休めた。[l]
+    体を休めた。[r][r]
+
+    体力が10上がった。[l][r]
+
     [jump target=*before_start]
 *pray
     [cm]
@@ -57,12 +72,14 @@
     [eval exp="countdown = countdown - 1"]
     [eval exp="luck = luck + 1"]
     教会で祈りをささげた。[r]
-    災難を回避できる気がする…[l][r]
+    災難を回避できる気がする…[r][r]
+
+    運が上がった。[l][r]
     [jump target=*before_start]
-*rule
-    [cm]
-    [link target=*start] →スタート画面にに戻る [endlink][r]
-    [s]
+*ok_start
+    準備は完了した。[r]
+    50㎞先にいるセリヌンティウスのもとへ向かおう。[r]
+    [link target=*after_start] →出走！ [endlink][r]
 
 *after_start
     [cm]
@@ -71,7 +88,7 @@
     NEXT：村の入り口[r]
     ついに今日からスタートだ。[r]
     メロスはどうする？[r]
-
+    戦闘力：[emb exp="power"][r]
     残り体力：[emb exp="hp"][r]
     残り時間：[emb exp="jikan"]時間[r]
     セリヌンティウスまであと50km[l][r]
@@ -472,7 +489,7 @@
     [eval exp="jikan = jikan-10"]
     [if exp="hp < 1"]
         [jump target=*gameover_hitpoint]
-    [elsif exp="hp < 50"]
+    [elsif exp="hp + power < 50"]
         [jump target=*gameover_touzoku]
     [elsif exp="jikan < 1"]
         [jump target=*gameover_time]
