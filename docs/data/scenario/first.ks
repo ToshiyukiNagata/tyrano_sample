@@ -123,8 +123,16 @@
     [cm]
     [bg storage=touzoku_lose.jpg time=500]
     盗賊に負けてしまった…[r]
-    【BadEnd3:敗北】[r]
+    【BadEnd3:最初の敗北】[r]
     （Hint:盗賊に勝つには体力と戦闘力の和が300以上必要。）[r]
+    [link target=*start] やり直す[endlink][r]
+    [s]
+*gameover_king
+    [cm]
+    [bg storage=touzoku_lose.jpg time=500]
+    王に負けてしまった…[r]
+    【BadEnd4:最後の敗北】[r]
+    （Hint:王に勝つには体力と戦闘力の和が300以上必要。）[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 *clear_meet
@@ -603,7 +611,7 @@
 *king_hantei
     [cm]
     [if exp="hp + power < 50"]
-        [jump target=*gameover_touzoku]
+        [jump target=*gameover_king]
     
     [else]
         [jump target=*clear_meet]
