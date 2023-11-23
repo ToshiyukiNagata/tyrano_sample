@@ -44,20 +44,20 @@
         所持金：[emb exp="money"]G[r]
         残りターン：[emb exp="countdown"][r]
         今日は…[r][r]
-        [link target=*train] →体を鍛える。 [endlink][r]
-        [link target=*cure] →休む。 [endlink][r]
+        [link target=*train] →体を鍛える。(戦闘力+10,体力-10)[endlink][r]
+        [link target=*cure] →休む。(体力+10) [endlink][r]
         [link target=*pray] →教会に行く。 [endlink][r]
-        [link target=*work] →バイトをする。 [endlink][r]
+        [link target=*work] →バイトをする。(所持金+100G,体力-10) [endlink][r]
         [s]
     [endif]
 *train
     [cm]
     [bg storage=train.jpg time=500]
     [eval exp="countdown = countdown - 1"]
-    [eval exp="power = power + 10"]
+    [eval exp="power = power + 30"]
     [eval exp="hp = hp - 10"]
     体を鍛えた。[r][r]
-    戦闘力が10上がった。体力が10減った。[l][r]
+    戦闘力が30上がった。体力が10減った。[l][r]
     [jump target=*before_start]
 *cure
     [cm]
@@ -85,7 +85,7 @@
     [eval exp="countdown = countdown - 1"]
     [eval exp="money = money + 100"]
     教会の清掃をした。[r]
-    所持金が100G増えた。[l][r]
+    所持金が100G増えた。体力が10減った。[l][r]
     [jump target=*before_start]
 
 *ok_start
@@ -110,8 +110,8 @@
     所持金：[emb exp="money"][r]
     セリヌンティウスまであと50km[r][r]
 
-    [link target=*tag_sleep_ie] →寝る [endlink][r]
-    [link target=*tag_run_gate] →走る [endlink][r]
+    [link target=*tag_sleep_ie] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*tag_run_gate] →走る(体力-10,時間-10,距離-10km)[endlink][r]
     [s]
 
 *gameover_hitpoint
@@ -148,8 +148,8 @@
     [bg storage=touzoku_lose.jpg time=500]
     王に負けてしまった…[r]
     【BadEnd4:最後の敗北】[r]
-    （Hint1:王に勝つには体力と戦闘力の和が300以上必要。）[r]
-    （Hint2:王を懐柔するには100Gが必要。）[r]
+    （Hint1:王に勝つには体力と戦闘力の和が200以上必要。）[r]
+    （Hint2:王を懐柔するには300Gが必要。）[r]
     [link target=*start] やり直す[endlink][r]
     [s]
 *clear_meet
@@ -190,10 +190,9 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと50km[r][r]
 
-        [link target=*tag_sleep_ie] →寝る [endlink][r]
-        [link target=*tag_run_gate] →走る [endlink][r]
-        [s]
-
+    [link target=*tag_sleep_ie] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*tag_run_gate] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [s]
     [endif]
 
 *tag_sleep_gate
@@ -217,10 +216,9 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと40km[r][r]
 
-        [link target=*tag_sleep_gate] →寝る [endlink][r]
-        [link target=*event_kawa] →走る [endlink][r]
-        [s]
-
+    [link target=*tag_sleep_gate] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*event_kawa] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [s]
     [endif]
 
 *tag_run_gate
@@ -247,10 +245,9 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと40km[r][r]
 
-        [link target=*tag_sleep_gate] →寝る [endlink][r]
-        [link target=*event_kawa] →走る [endlink][r]
-        [s]
-
+    [link target=*tag_sleep_gate] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*event_kawa] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [s]
     [endif]
 
 *tag_sleep_kawa
@@ -274,10 +271,9 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*event_touge] →走る [endlink][r]
-        [s]
-
+    [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*event_touge] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [s]
     [endif]
 
 *tag_run_kawa
@@ -305,10 +301,9 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*event_touge] →走る [endlink][r]
-        [s]
-
+    [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*event_touge] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [s]
     [endif]
 
 *tag_sleep_touge
@@ -332,10 +327,9 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*event_nohara] →走る [endlink][r]
-        [s]
-
+    [link target=*tag_sleep_touge] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [s]
     [endif]
 
 *tag_run_touge
@@ -363,10 +357,9 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*event_nohara] →走る [endlink][r]
-        [s]
-
+    [link target=*tag_sleep_touge] →寝る(体力+10,時間-10) [endlink][r]
+    [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
+    [s]
     [endif]
 
 *tag_sleep_nohara
@@ -388,8 +381,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと10km[r][r]
-        [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*king_fight]→走る [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10) [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
         [s]
     [endif]
 
@@ -416,8 +409,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと10km[r][r]
-        [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*king_fight] →走る [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10) [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km)[endlink][r]        [s]
         [s]
 
     [endif]
@@ -426,13 +419,13 @@
     [bg storage=kawa.jpg time=500] 
     [if exp="luck <= 0"]
         川が氾濫を起こしている…[r]
-        [link target=*tag_ukai_kawa] →迂回する [endlink][r]
-        [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r]
+        [link target=*tag_ukai_kawa] →迂回する(体力-10,時間-20)[endlink][r]
+        [link target=*tag_susumu_kawa] →川を突っ切る(体力-20,時間-10) [endlink][r]
         [s]
     [else]
-        川が氾濫を起こしている…[r][r]
-        [link target=*tag_ukai_kawa] →迂回する [endlink][r]
-        [link target=*tag_susumu_kawa] →川を突っ切る [endlink][r] 
+        川が氾濫を起こしている…[r]
+        [link target=*tag_ukai_kawa] →迂回する(体力-10,時間-20) [endlink][r]
+        [link target=*tag_susumu_kawa] →川を突っ切る(体力-20,時間-10) [endlink][r] 
         [link target=*tag_inoru_kawa] →収まるように祈る [endlink][r]
         [s]
     [endif] 
@@ -457,8 +450,8 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*event_touge] →走る [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*event_touge] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -482,8 +475,8 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*event_touge] →走る [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*event_touge] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -508,8 +501,8 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと30km[r][r]
 
-        [link target=*tag_sleep_kawa] →寝る [endlink][r]
-        [link target=*event_touge] →走る [endlink][r]
+        [link target=*tag_sleep_kawa] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*event_touge] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -524,8 +517,8 @@
     戦闘力：[emb exp="power"][r]
     所持金：[emb exp="money"][r][r]
     [link target=*tag_tatakau_touge] →戦う [endlink][r]
-    [link target=*tag_nigeru_touge] →逃げる [endlink][r]
-    [link target=*tag_kane_touge] →金を渡す [endlink][r]
+    [link target=*tag_nigeru_touge] →逃げる(体力-20,時間-10)  [endlink][r]
+    [link target=*tag_kane_touge] →金を渡す(所持金-100G) [endlink][r]
     [s]
 
 *tag_nigeru_touge
@@ -548,8 +541,8 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*event_nohara] →走る [endlink][r]
+        [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -577,8 +570,8 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*event_nohara] →走る [endlink][r]
+        [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -601,8 +594,8 @@
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと20km[r][r]
 
-        [link target=*tag_sleep_touge] →寝る [endlink][r]
-        [link target=*event_nohara] →走る [endlink][r]
+        [link target=*tag_sleep_touge] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*event_nohara] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -641,8 +634,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと10km[r][r]
-        [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*king_fight] →走る [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -674,8 +667,8 @@
         戦闘力：[emb exp="power"][r]
         所持金：[emb exp="money"][r]
         セリヌンティウスまであと10km[r]
-        [link target=*tag_sleep_nohara] →寝る [endlink][r]
-        [link target=*king_fight] →走る [endlink][r]
+        [link target=*tag_sleep_nohara] →寝る(体力+10,時間-10)  [endlink][r]
+        [link target=*king_fight] →走る(体力-10,時間-10,距離-10km) [endlink][r]
         [s]
 
     [endif]
@@ -687,7 +680,7 @@
     戦闘力：[emb exp="power"][r]
     所持金：[emb exp="money"]G[r]
     [link target=*king_hantei] →戦う [endlink][r]
-    [link target=*king_kane] →金を渡して懐柔する [endlink][r]
+    [link target=*king_kane] →金を渡して懐柔する(所持金-300G) [endlink][r]
     [s]
 *king_kane
     [cm]
@@ -701,7 +694,7 @@
     [endif]
 *king_hantei
     [cm]
-    [if exp="hp + power < 50"]
+    [if exp="hp + power < 200"]
         [jump target=*gameover_king]
     
     [else]
