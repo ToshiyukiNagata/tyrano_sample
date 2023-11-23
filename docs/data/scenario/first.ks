@@ -60,6 +60,7 @@
     災難を回避できる気がする…[l][r]
     [jump target=*before_start]
 *rule
+    [cm]
     [link target=*start] →スタート画面にに戻る [endlink][r]
 
 *after_start
