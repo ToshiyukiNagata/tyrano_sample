@@ -12,6 +12,7 @@
     [eval exp="power = 100"]
     [eval exp="luck = 0"]
     [eval exp="countdown = 5"]
+    [eval exp="money = 0"]
     
 
     「メロ娘」[l][r]
@@ -40,11 +41,13 @@
         現在地：妹の家[r]
         残り体力：[emb exp="hp"][r]
         戦闘力：[emb exp="power"][r]
+        所持金：[emb exp="money"]G[r]
         残りターン：[emb exp="countdown"][r]
         今日は…[r]
         [link target=*train] →体を鍛える。 [endlink][r]
         [link target=*cure] →休む。 [endlink][r]
         [link target=*pray] →教会に行く。 [endlink][r]
+        [link target=*work] →バイトをする。 [endlink][r]
         [s]
     [endif]
 *train
@@ -76,6 +79,15 @@
 
     運が上がった。[l][r]
     [jump target=*before_start]
+*work
+    [cm]
+    [bg storage=money.jpg time=500]
+    [eval exp="countdown = countdown - 1"]
+    [eval exp="money = money + 100"]
+    教会の清掃をした。[r]
+    所持金が100G増えた。[l][r]
+    [jump target=*before_start]
+
 *ok_start
     [cm]
     [bg storage=ie.jpg time=500]
@@ -484,8 +496,10 @@
     山賊が現れた！[r]
     残り体力：[emb exp="hp"][r]
     戦闘力：[emb exp="power"][r]
+    所持金：[emb exp="money"][r]
     [link target=*tag_tatakau_touge] →戦う [endlink][r]
     [link target=*tag_nigeru_touge] →逃げる [endlink][r]
+    [link target=*tag_kane_touge] →金を渡す [endlink][r]
     [s]
 
 *tag_nigeru_touge
@@ -527,6 +541,26 @@
         [bg storage=touzoku_win.jpg time=500]
         
         盗賊に勝利した！[r]
+        現在地：峠[r]
+        NEXT：野原[r]
+        残り体力：[emb exp="hp"][r]
+        残り時間：[emb exp="jikan"]時間[r]
+        セリヌンティウスまであと20km[r][r]
+
+        [link target=*tag_sleep_touge] →寝る [endlink][r]
+        [link target=*event_nohara] →走る [endlink][r]
+        [s]
+
+    [endif]
+*tag_kane_touge
+    [cm]
+    [if exp="money < 50"]
+        所持金が足りないようだ。[l][r]
+        [jump target=*event_touge]
+    
+    [else]
+        [eval exp="money = money-100"]
+        所持金のうち100Gを渡した。[l][r]
         現在地：峠[r]
         NEXT：野原[r]
         残り体力：[emb exp="hp"][r]
@@ -614,7 +648,18 @@
     残り体力：[emb exp="hp"][r]
     戦闘力：[emb exp="power"][r]
     [link target=*king_hantei] →戦う [endlink][r]
+    [link target=*king_kane] →金を渡す [endlink][r]
     [s]
+*king_kane
+    [cm]
+    [if exp="money < 50"]
+        所持金が足りないようだ。[l][r]
+        [jump target=*king_fight]
+    
+    [else]
+        [jump target=*clear_meet]
+
+    [endif]
 *king_hantei
     [cm]
     [if exp="hp + power < 50"]
