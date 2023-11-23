@@ -95,7 +95,7 @@
     戦闘力：[emb exp="power"][r]
     残り体力：[emb exp="hp"][r]
     残り時間：[emb exp="jikan"]時間[r]
-    セリヌンティウスまであと50km[l][r]
+    セリヌンティウスまであと50km[r]
 
     [link target=*tag_sleep_ie] →寝る [endlink][r]
     [link target=*tag_run_gate] →走る [endlink][r]
@@ -609,7 +609,7 @@
     [endif]
 *king_fight
     [cm]
-    [bg storage=huseikai.jpg time=500]
+    [bg storage=king.jpg time=500]
     王が現れた！
     残り体力：[emb exp="hp"][r]
     戦闘力：[emb exp="power"][r]
